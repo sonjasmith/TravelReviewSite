@@ -95,3 +95,6 @@ C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\TravelReviewSite\Trav
 C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\TravelReviewSite\TravelReviewSite\obj\Debug\TravelReviewSite.dll
 C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\TravelReviewSite\TravelReviewSite\obj\Debug\TravelReviewSite.pdb
 C:\Users\WeCanCodeIT\documents\visual studio 2015\Projects\TravelReviewSite\TravelReviewSite\obj\Debug\TravelReviewSite.csprojResolveAssemblyReference.cache
+C:\Users\WeCanCodeIT\Documents\visual studio 2015\Projects\TravelReviewSite\TravelReviewSite\obj\Debug\TravelReviewSite.Migrations.InitialCreate.resources
+C:\Users\WeCanCodeIT\Documents\visual studio 2015\Projects\TravelReviewSite\TravelReviewSite\obj\Debug\TravelReviewSite.csproj.GenerateResource.Cache
+C:\Users\WeCanCodeIT\Documents\visual studio 2015\Projects\TravelReviewSite\TravelReviewSite\obj\Debug\TravelReviewSite.Migrations.ChangedCategories.resources
