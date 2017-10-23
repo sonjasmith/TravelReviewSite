@@ -9,43 +9,98 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.CategoryName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ReviewTitle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FullReview)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PublishDate)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.CategoryName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReviewTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FullReview)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PublishDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReviewID })
-        </td>
-    </tr>
+
+@* My goal was to have each review populate in it's appropriate thumbnail with 
+   the category name "Museum Reviews", "Nightlife Reviews", "Shopping Reviews", etc.
+   but I'm not exactly sure how to achieve this. As is you get the generic "Review CLE"
+   for thumbnail title.*@
+@foreach (var item in Model)
+{
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="thumbnail">
+            @*<img src="" alt="Cleveland Musuem" />*@
+            <div class="caption">
+                <h3><b>Review CLE</b></h3>
+                
+                @*<p><a href="#" class="btn btn-primary" role="button">Read more</a></p>*@
+
+                <b> @Html.DisplayFor(modelItem => item.Category.CategoryName)</b>:
+                @Html.DisplayFor(modelItem => item.ReviewTitle)<br>
+                @Html.DisplayFor(modelItem => item.FullReview)<br>
+                @Html.DisplayFor(modelItem => item.PublishDate)<br>
+
+                <br><p>Would you recommend the musuem to others?</p>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Select option below</label>
+                    <div class="col-lg-10">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                No
+                            </label>
+                            <br>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })<br>
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
+    </div>
+ </div>
+
 }
 
-</table>
+
+
+
+
+            @*<table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Category.CategoryName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ReviewTitle)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FullReview)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PublishDate)
+                    </th>
+                    <th></th>
+                </tr>
+
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReviewTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FullReview)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PublishDate)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.ReviewID }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.ReviewID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.ReviewID })
+                    </td>
+                </tr>
+            }
+
+            </table>*@

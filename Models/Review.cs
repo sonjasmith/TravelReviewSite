@@ -20,6 +20,7 @@ namespace TravelReviewSite.Models
         public DateTime PublishDate { get; set; }
 
         [ForeignKey("Category")]
+        [DisplayName("Category")]
         public int CategoryID { get; set; }
 
         public virtual Category Category { get; set; }
